@@ -1,0 +1,9 @@
+services:
+  snorlaxs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NPM_BUILD=npm install --omit=dev --frozen-lockfile
+    ports:
+      - "8080:8080"
